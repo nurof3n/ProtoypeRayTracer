@@ -1,0 +1,27 @@
+size 640 480
+camera 0 -4 4 0 -1 0 0 1 0 45
+output scene.png
+
+maxdepth 5
+
+directional 0 0 -0.5 0 0.3 0
+
+ambient 0.01 0.01 0.01
+specular 0.4 0.4 0.4
+diffuse 0.4 0.4 0.4
+shininess 40
+emission 0 0 0
+
+pushTransform
+scale 0.4 0.4 0.4
+translate -1.5 -.8 0.65
+
+sphere 0 0 0 1
+popTransform
+
+pushTransform
+scale 0.4 0.4 0.4
+translate 1.5 -.8 0.65
+
+sphere 0 0 0 1
+popTransform
