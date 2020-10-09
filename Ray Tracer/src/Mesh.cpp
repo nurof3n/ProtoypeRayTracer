@@ -46,7 +46,7 @@ std::optional<std::pair<float, vec3>> Mesh::intersectTriangle( const Ray& ray, c
 
     vec3  point   = ray.origin + distance * ray.direction;
     float areaSum = NuroMath::computeArea( point, v0, v1 ) + NuroMath::computeArea( point, v0, v2 ) + NuroMath::computeArea( point, v1, v2 );
-    if( std::abs( areaSum - area ) >= 1e-6f )  // the point is not inside the triangle
+    if( std::abs( areaSum - area ) > 1e-6f )  // the point is not inside the triangle
         return std::nullopt;
 
     return std::pair<float, vec3>( distance, normal );
